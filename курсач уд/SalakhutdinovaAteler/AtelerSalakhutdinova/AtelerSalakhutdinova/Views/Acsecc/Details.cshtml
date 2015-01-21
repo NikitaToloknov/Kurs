@@ -1,0 +1,36 @@
+﻿@model AtelerSalakhutdinova.Models.Аксессуары
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Аксессуары</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_аксессуара)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_аксессуара)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Наименование_аксессуара)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Наименование_аксессуара)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Тип)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Тип)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AtelerSalakhutdinova.Models.СведенияОТканях>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.СкладТканей.Наименование_ткани)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Страна_производитель)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_изготовления)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_привоза)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Покупная_цена)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.СкладТканей.Наименование_ткани)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Страна_производитель)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_изготовления)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_привоза)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Покупная_цена)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

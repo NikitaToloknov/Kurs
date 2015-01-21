@@ -1,0 +1,67 @@
+﻿@model AtelerSalakhutdinova.Models.СведенияОТканях
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>СведенияОТканях</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_ткани, "СкладТканей")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_ткани", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_ткани)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Страна_производитель)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Страна_производитель)
+            @Html.ValidationMessageFor(model => model.Страна_производитель)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Дата_изготовления)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Дата_изготовления)
+            @Html.ValidationMessageFor(model => model.Дата_изготовления)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Дата_привоза)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Дата_привоза)
+            @Html.ValidationMessageFor(model => model.Дата_привоза)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Покупная_цена)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Покупная_цена)
+            @Html.ValidationMessageFor(model => model.Покупная_цена)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

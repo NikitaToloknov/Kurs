@@ -1,0 +1,50 @@
+﻿@model AtelerSalakhutdinova.Models.СведенияОТканях
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>СведенияОТканях</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Страна_производитель)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Страна_производитель)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_изготовления)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_изготовления)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_привоза)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_привоза)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Покупная_цена)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Покупная_цена)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

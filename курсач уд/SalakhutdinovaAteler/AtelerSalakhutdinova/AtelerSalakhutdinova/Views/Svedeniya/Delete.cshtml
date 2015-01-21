@@ -1,0 +1,53 @@
+﻿@model AtelerSalakhutdinova.Models.СведенияОТканях
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>СведенияОТканях</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Страна_производитель)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Страна_производитель)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_изготовления)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_изготовления)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_привоза)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_привоза)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Покупная_цена)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Покупная_цена)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

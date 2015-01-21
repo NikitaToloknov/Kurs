@@ -1,0 +1,57 @@
+﻿@model AtelerSalakhutdinova.Models.Мерки
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Мерки</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_мерки)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_мерки)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Обхват_груди)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Обхват_груди)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Обхват_талии)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Обхват_талии)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Обхват_бедер)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Обхват_бедер)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Рост)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Рост)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Примечания)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Примечания)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>Admin</h2>
+    <html>
+  <head>
+  
+    <meta charset="utf-8">
+    <title>Название документа</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+  
+    </style>
+  </head>
+ 
+  <body >
+  
+    <ul id="navbar">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Клиент</a>
+          <ul>
+          <li> 
+              @Html.ActionLink("Клиенты","Index","Klient")</li>
+          <li> @Html.ActionLink("Заказы","Index","Zakaz")</li>
+        </ul>
+      </li>
+        <li><a href="#">Сотрудник</a>
+          <ul>
+          <li> 
+              @Html.ActionLink("Сотрудники","Index","Sotrudnik")</li>
+          <li> @Html.ActionLink("Бухгалтерия","Index","Buhgalteriya")</li>
+        </ul>
+      </li>
+              <li><a href="#">Склад</a>
+        <ul>
+          <li>  @Html.ActionLink("Аксессуары","Index","Acsecc")</li>
+          <li>  @Html.ActionLink("Ткани","Index","Sklad")</li>
+          <li>  @Html.ActionLink("Мерки","Index","Merki")</li>
+            <li>@Html.ActionLink("Выкройки","Index","Vikroiki")</li>
+        </ul>
+      </li>
+                <li><a href="#">Записи</a>
+        <ul>
+          <li>  @Html.ActionLink("На мерку","Index","ZapisNaMerki")</li>
+          <li>  @Html.ActionLink("На доставку","Index","Dostavka")</li>
+        </ul>
+      </li>
+        <li>@Html.ActionLink("Скидка","Index","Skidka")</li>
+      
+    </ul> 
+  </body>
+</html>

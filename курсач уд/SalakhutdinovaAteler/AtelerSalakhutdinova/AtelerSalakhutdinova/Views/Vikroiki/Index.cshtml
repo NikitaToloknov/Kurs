@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AtelerSalakhutdinova.Models.Выкройки>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_выкройки)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Модель)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Мерки.Примечания)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.СкладТканей.Наименование_ткани)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Аксессуары.Наименование_аксессуара)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Количество_ткани)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_выкройки)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Модель)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Мерки.Примечания)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.СкладТканей.Наименование_ткани)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Аксессуары.Наименование_аксессуара)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Количество_ткани)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

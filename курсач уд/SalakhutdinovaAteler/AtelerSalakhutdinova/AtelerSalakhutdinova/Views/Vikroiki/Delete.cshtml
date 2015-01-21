@@ -1,0 +1,60 @@
+﻿@model AtelerSalakhutdinova.Models.Выкройки
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Выкройки</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_выкройки)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_выкройки)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Модель)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Модель)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Мерки.Примечания)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Мерки.Примечания)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.СкладТканей.Наименование_ткани)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Аксессуары.Наименование_аксессуара)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Аксессуары.Наименование_аксессуара)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Количество_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Количество_ткани)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

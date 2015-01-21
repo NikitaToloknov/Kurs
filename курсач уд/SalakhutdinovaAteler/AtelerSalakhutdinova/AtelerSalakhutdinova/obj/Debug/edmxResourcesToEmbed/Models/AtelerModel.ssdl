@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище AtelierModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Хранилище AtelierModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Хранилище AtelierModel.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Аксессуары" EntityType="Хранилище AtelierModel.Аксессуары" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Бухгалтерия" EntityType="Хранилище AtelierModel.Бухгалтерия" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Выкройки" EntityType="Хранилище AtelierModel.Выкройки" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Доставка" EntityType="Хранилище AtelierModel.Доставка" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Заказ" EntityType="Хранилище AtelierModel.Заказ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ЗаписьНаМерку" EntityType="Хранилище AtelierModel.ЗаписьНаМерку" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Клиент" EntityType="Хранилище AtelierModel.Клиент" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Мерки" EntityType="Хранилище AtelierModel.Мерки" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Оборудование" EntityType="Хранилище AtelierModel.Оборудование" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="СведенияОТканях" EntityType="Хранилище AtelierModel.СведенияОТканях" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Скидка" EntityType="Хранилище AtelierModel.Скидка" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="СкладТканей" EntityType="Хранилище AtelierModel.СкладТканей" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Состояние" EntityType="Хранилище AtelierModel.Состояние" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Сотрудник" EntityType="Хранилище AtelierModel.Сотрудник" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="СотрудникОборудование" EntityType="Хранилище AtelierModel.СотрудникОборудование" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Бухгалтерия_Сотрудник" Association="Хранилище AtelierModel.FK_Бухгалтерия_Сотрудник">
+      <End Role="Сотрудник" EntitySet="Сотрудник" />
+      <End Role="Бухгалтерия" EntitySet="Бухгалтерия" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Выкройки_Аксессуар" Association="Хранилище AtelierModel.FK_Выкройки_Аксессуар">
+      <End Role="Аксессуары" EntitySet="Аксессуары" />
+      <End Role="Выкройки" EntitySet="Выкройки" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Выкройки_Мерки" Association="Хранилище AtelierModel.FK_Выкройки_Мерки">
+      <End Role="Мерки" EntitySet="Мерки" />
+      <End Role="Выкройки" EntitySet="Выкройки" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Выкройки_Ткани" Association="Хранилище AtelierModel.FK_Выкройки_Ткани">
+      <End Role="СкладТканей" EntitySet="СкладТканей" />
+      <End Role="Выкройки" EntitySet="Выкройки" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Доставка_Сотрудник" Association="Хранилище AtelierModel.FK_Доставка_Сотрудник">
+      <End Role="Сотрудник" EntitySet="Сотрудник" />
+      <End Role="Доставка" EntitySet="Доставка" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заказ_Выкройки" Association="Хранилище AtelierModel.FK_Заказ_Выкройки">
+      <End Role="Выкройки" EntitySet="Выкройки" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заказ_Доставка" Association="Хранилище AtelierModel.FK_Заказ_Доставка">
+      <End Role="Доставка" EntitySet="Доставка" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заказ_Клинт" Association="Хранилище AtelierModel.FK_Заказ_Клинт">
+      <End Role="Клиент" EntitySet="Клиент" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ЗаписьНаМерку_Заказчик" Association="Хранилище AtelierModel.FK_ЗаписьНаМерку_Заказчик">
+      <End Role="Клиент" EntitySet="Клиент" />
+      <End Role="ЗаписьНаМерку" EntitySet="ЗаписьНаМерку" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СведенияОТканях_СкладТканей" Association="Хранилище AtelierModel.FK_СведенияОТканях_СкладТканей">
+      <End Role="СкладТканей" EntitySet="СкладТканей" />
+      <End Role="СведенияОТканях" EntitySet="СведенияОТканях" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Состояние_Заказ" Association="Хранилище AtelierModel.FK_Состояние_Заказ">
+      <End Role="Заказ" EntitySet="Заказ" />
+      <End Role="Состояние" EntitySet="Состояние" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СотрудникОборудование_Оборудование" Association="Хранилище AtelierModel.FK_СотрудникОборудование_Оборудование">
+      <End Role="Оборудование" EntitySet="Оборудование" />
+      <End Role="СотрудникОборудование" EntitySet="СотрудникОборудование" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СотрудникОборудование_Сотрудник" Association="Хранилище AtelierModel.FK_СотрудникОборудование_Сотрудник">
+      <End Role="Сотрудник" EntitySet="Сотрудник" />
+      <End Role="СотрудникОборудование" EntitySet="СотрудникОборудование" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Аксессуары">
+    <Key>
+      <PropertyRef Name="ID аксессуара" />
+    </Key>
+    <Property Name="ID аксессуара" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Наименование аксессуара" Type="nchar" MaxLength="30" />
+    <Property Name="Тип" Type="nchar" MaxLength="30" />
+    <Property Name="Фото" Type="image" />
+  </EntityType>
+  <EntityType Name="Бухгалтерия">
+    <Key>
+      <PropertyRef Name="ID зарплаты" />
+    </Key>
+    <Property Name="ID зарплаты" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID сотрудника" Type="int" />
+    <Property Name="Зарплата" Type="money" />
+    <Property Name="Премия" Type="money" />
+    <Property Name="Дата зарплаты" Type="date" />
+  </EntityType>
+  <EntityType Name="Выкройки">
+    <Key>
+      <PropertyRef Name="ID выкройки" />
+    </Key>
+    <Property Name="ID выкройки" Type="int" Nullable="false" />
+    <Property Name="Модель" Type="nchar" MaxLength="30" />
+    <Property Name="Схема" Type="image" />
+    <Property Name="Фото модели" Type="image" />
+    <Property Name="ID мерки" Type="int" />
+    <Property Name="ID ткани" Type="int" />
+    <Property Name="ID аксессуара" Type="int" />
+    <Property Name="Количество ткани" Type="int" />
+  </EntityType>
+  <EntityType Name="Доставка">
+    <Key>
+      <PropertyRef Name="ID доставки" />
+    </Key>
+    <Property Name="ID доставки" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID сотрудника" Type="int" />
+    <Property Name="Стоимость доставки" Type="money" />
+    <Property Name="Дата доставки" Type="date" />
+    <Property Name="Время доставки" Type="time" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="ID заказа" />
+    </Key>
+    <Property Name="ID заказа" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID заказчика" Type="int" />
+    <Property Name="ID доставки" Type="int" />
+    <Property Name="ID сотрудника" Type="int" />
+    <Property Name="ID выкройки" Type="int" />
+    <Property Name="Цена заказа" Type="money" />
+    <Property Name="Предоплата" Type="money" />
+    <Property Name="Дата заказа" Type="nchar" MaxLength="10" />
+    <Property Name="Срочность" Type="bit" />
+  </EntityType>
+  <EntityType Name="ЗаписьНаМерку">
+    <Key>
+      <PropertyRef Name="ID мерки" />
+    </Key>
+    <Property Name="ID мерки" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID заказчика" Type="int" />
+    <Property Name="Дата" Type="date" />
+    <Property Name="Время" Type="time" />
+  </EntityType>
+  <EntityType Name="Клиент">
+    <Key>
+      <PropertyRef Name="ID заказчика" />
+    </Key>
+    <Property Name="ID заказчика" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Фамилия" Type="nchar" MaxLength="30" />
+    <Property Name="Имя" Type="nchar" MaxLength="30" />
+    <Property Name="Отчество" Type="nchar" MaxLength="30" />
+    <Property Name="Контактный телефон" Type="bigint" />
+    <Property Name="E-mail" Type="nchar" MaxLength="30" />
+    <Property Name="Password" Type="nchar" MaxLength="30" />
+    <Property Name="Количество заказов" Type="int" />
+  </EntityType>
+  <EntityType Name="Мерки">
+    <Key>
+      <PropertyRef Name="ID мерки" />
+    </Key>
+    <Property Name="ID мерки" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Обхват груди" Type="int" />
+    <Property Name="Обхват талии" Type="int" />
+    <Property Name="Обхват бедер" Type="int" />
+    <Property Name="Рост" Type="int" />
+    <Property Name="Примечания" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Оборудование">
+    <Key>
+      <PropertyRef Name="ID оборудования" />
+    </Key>
+    <Property Name="ID оборудования" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Наименование оборудования" Type="nchar" MaxLength="30" />
+    <Property Name="Дата приобретения" Type="date" />
+    <Property Name="Состояние" Type="bit" />
+  </EntityType>
+  <EntityType Name="СведенияОТканях">
+    <Key>
+      <PropertyRef Name="ID ткани" />
+    </Key>
+    <Property Name="ID ткани" Type="int" Nullable="false" />
+    <Property Name="Страна производитель" Type="nchar" MaxLength="30" />
+    <Property Name="Дата изготовления" Type="date" />
+    <Property Name="Дата привоза" Type="date" />
+    <Property Name="Покупная цена" Type="money" />
+  </EntityType>
+  <EntityType Name="Скидка">
+    <Key>
+      <PropertyRef Name="Количество заказов" />
+    </Key>
+    <Property Name="Количество заказов" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Скидка" Type="int" />
+  </EntityType>
+  <EntityType Name="СкладТканей">
+    <Key>
+      <PropertyRef Name="ID ткани" />
+    </Key>
+    <Property Name="ID ткани" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Наименование ткани" Type="nchar" MaxLength="30" />
+    <Property Name="Количество " Type="int" />
+    <Property Name="Состав ткани" Type="nchar" MaxLength="100" />
+    <Property Name="Цвет" Type="nchar" MaxLength="30" />
+    <Property Name="Цена" Type="money" />
+  </EntityType>
+  <EntityType Name="Состояние">
+    <Key>
+      <PropertyRef Name="ID заказа" />
+    </Key>
+    <Property Name="ID заказа" Type="int" Nullable="false" />
+    <Property Name="Примечания" Type="nvarchar" MaxLength="50" />
+    <Property Name="Состояние" Type="bit" />
+  </EntityType>
+  <EntityType Name="Сотрудник">
+    <Key>
+      <PropertyRef Name="ID сотрудника" />
+    </Key>
+    <Property Name="ID сотрудника" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Фамилия" Type="nchar" MaxLength="30" />
+    <Property Name="Имя" Type="nchar" MaxLength="30" />
+    <Property Name="Отчество" Type="nchar" MaxLength="30" />
+    <Property Name="Должность" Type="nchar" MaxLength="30" />
+    <Property Name="Дата приема на работу" Type="date" />
+    <Property Name="Общий стаж" Type="int" />
+    <Property Name="Стаж" Type="int" />
+    <Property Name="Доступ ко всем данным" Type="bit" />
+    <Property Name="E-mail" Type="nchar" MaxLength="30" />
+    <Property Name="Password" Type="nchar" MaxLength="30" />
+    <Property Name="Оклад" Type="money" />
+  </EntityType>
+  <EntityType Name="СотрудникОборудование">
+    <Key>
+      <PropertyRef Name="ID Связи" />
+    </Key>
+    <Property Name="ID Связи" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID сотрудника" Type="int" />
+    <Property Name="ID оборудования" Type="int" />
+  </EntityType>
+  <Association Name="FK_Бухгалтерия_Сотрудник">
+    <End Role="Сотрудник" Type="Хранилище AtelierModel.Сотрудник" Multiplicity="0..1" />
+    <End Role="Бухгалтерия" Type="Хранилище AtelierModel.Бухгалтерия" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудник">
+        <PropertyRef Name="ID сотрудника" />
+      </Principal>
+      <Dependent Role="Бухгалтерия">
+        <PropertyRef Name="ID сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Выкройки_Аксессуар">
+    <End Role="Аксессуары" Type="Хранилище AtelierModel.Аксессуары" Multiplicity="0..1" />
+    <End Role="Выкройки" Type="Хранилище AtelierModel.Выкройки" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Аксессуары">
+        <PropertyRef Name="ID аксессуара" />
+      </Principal>
+      <Dependent Role="Выкройки">
+        <PropertyRef Name="ID аксессуара" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Выкройки_Мерки">
+    <End Role="Мерки" Type="Хранилище AtelierModel.Мерки" Multiplicity="0..1" />
+    <End Role="Выкройки" Type="Хранилище AtelierModel.Выкройки" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Мерки">
+        <PropertyRef Name="ID мерки" />
+      </Principal>
+      <Dependent Role="Выкройки">
+        <PropertyRef Name="ID мерки" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Выкройки_Ткани">
+    <End Role="СкладТканей" Type="Хранилище AtelierModel.СкладТканей" Multiplicity="0..1" />
+    <End Role="Выкройки" Type="Хранилище AtelierModel.Выкройки" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="СкладТканей">
+        <PropertyRef Name="ID ткани" />
+      </Principal>
+      <Dependent Role="Выкройки">
+        <PropertyRef Name="ID ткани" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Доставка_Сотрудник">
+    <End Role="Сотрудник" Type="Хранилище AtelierModel.Сотрудник" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Доставка" Type="Хранилище AtelierModel.Доставка" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудник">
+        <PropertyRef Name="ID сотрудника" />
+      </Principal>
+      <Dependent Role="Доставка">
+        <PropertyRef Name="ID сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заказ_Выкройки">
+    <End Role="Выкройки" Type="Хранилище AtelierModel.Выкройки" Multiplicity="0..1" />
+    <End Role="Заказ" Type="Хранилище AtelierModel.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Выкройки">
+        <PropertyRef Name="ID выкройки" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="ID выкройки" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заказ_Доставка">
+    <End Role="Доставка" Type="Хранилище AtelierModel.Доставка" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Заказ" Type="Хранилище AtelierModel.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Доставка">
+        <PropertyRef Name="ID доставки" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="ID доставки" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заказ_Клинт">
+    <End Role="Клиент" Type="Хранилище AtelierModel.Клиент" Multiplicity="0..1" />
+    <End Role="Заказ" Type="Хранилище AtelierModel.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Клиент">
+        <PropertyRef Name="ID заказчика" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="ID заказчика" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ЗаписьНаМерку_Заказчик">
+    <End Role="Клиент" Type="Хранилище AtelierModel.Клиент" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ЗаписьНаМерку" Type="Хранилище AtelierModel.ЗаписьНаМерку" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Клиент">
+        <PropertyRef Name="ID заказчика" />
+      </Principal>
+      <Dependent Role="ЗаписьНаМерку">
+        <PropertyRef Name="ID заказчика" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СведенияОТканях_СкладТканей">
+    <End Role="СкладТканей" Type="Хранилище AtelierModel.СкладТканей" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="СведенияОТканях" Type="Хранилище AtelierModel.СведенияОТканях" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="СкладТканей">
+        <PropertyRef Name="ID ткани" />
+      </Principal>
+      <Dependent Role="СведенияОТканях">
+        <PropertyRef Name="ID ткани" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Состояние_Заказ">
+    <End Role="Заказ" Type="Хранилище AtelierModel.Заказ" Multiplicity="1" />
+    <End Role="Состояние" Type="Хранилище AtelierModel.Состояние" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Заказ">
+        <PropertyRef Name="ID заказа" />
+      </Principal>
+      <Dependent Role="Состояние">
+        <PropertyRef Name="ID заказа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СотрудникОборудование_Оборудование">
+    <End Role="Оборудование" Type="Хранилище AtelierModel.Оборудование" Multiplicity="0..1" />
+    <End Role="СотрудникОборудование" Type="Хранилище AtelierModel.СотрудникОборудование" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Оборудование">
+        <PropertyRef Name="ID оборудования" />
+      </Principal>
+      <Dependent Role="СотрудникОборудование">
+        <PropertyRef Name="ID оборудования" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СотрудникОборудование_Сотрудник">
+    <End Role="Сотрудник" Type="Хранилище AtelierModel.Сотрудник" Multiplicity="0..1" />
+    <End Role="СотрудникОборудование" Type="Хранилище AtelierModel.СотрудникОборудование" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудник">
+        <PropertyRef Name="ID сотрудника" />
+      </Principal>
+      <Dependent Role="СотрудникОборудование">
+        <PropertyRef Name="ID сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="FunctionSalary" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Оклад" Type="money" Mode="In" />
+    <Parameter Name="Стаж" Type="int" Mode="In" />
+    <Parameter Name="ЧтоВернуть" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="ProcedureSalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ProcedurExperience" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

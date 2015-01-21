@@ -1,0 +1,81 @@
+﻿@model AtelerSalakhutdinova.Models.Заказ
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Заказ</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Состояние.Примечания)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Состояние.Примечания)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Клиент.Фамилия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Клиент.Фамилия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Доставка.ID_доставки)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Доставка.ID_доставки)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_сотрудника)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_сотрудника)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Выкройки.Модель)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Выкройки.Модель)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Цена_заказа)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Цена_заказа)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Предоплата)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Предоплата)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_заказа)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_заказа)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Срочность)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Срочность)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

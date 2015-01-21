@@ -1,0 +1,50 @@
+﻿@model AtelerSalakhutdinova.Models.Бухгалтерия
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Бухгалтерия</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_зарплаты)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_зарплаты)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Сотрудник.Фамилия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Сотрудник.Фамилия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Зарплата)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Зарплата)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Премия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Премия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_зарплаты)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_зарплаты)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

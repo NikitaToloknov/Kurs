@@ -1,0 +1,81 @@
+﻿@model IEnumerable<AtelerSalakhutdinova.Models.Заказ>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Состояние.Примечания)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Клиент.Фамилия)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Доставка.ID_доставки)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_сотрудника)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Выкройки.Модель)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Цена_заказа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Предоплата)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_заказа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Срочность)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Состояние.Примечания)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Клиент.Фамилия)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Доставка.ID_доставки)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_сотрудника)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Выкройки.Модель)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Цена_заказа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Предоплата)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_заказа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Срочность)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model AtelerSalakhutdinova.Models.ЗаписьНаМерку
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ЗаписьНаМерку</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_мерки)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_мерки)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Клиент.Фамилия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Клиент.Фамилия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Время)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Время)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

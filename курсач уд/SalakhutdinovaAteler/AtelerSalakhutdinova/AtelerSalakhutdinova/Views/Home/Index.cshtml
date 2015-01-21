@@ -1,0 +1,52 @@
+﻿@model AtelerSalakhutdinova.Models.Клиент
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    body {background-image:url('/Content/image/red.jpg');
+              background-size:100%; 
+              border-top-color:white           
+        
+        } 
+    </style>
+<h1><span style=";font-family:Monotype Corsiva;
+font-size:45px;color:white;">
+Вас приветствует ателье "Алые паруса"!</span></h1>
+<body>
+    <div>
+    @using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset style="width:50px">
+        <legend>Данные для входа</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.E_mail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.E_mail)
+            @Html.ValidationMessageFor(model => model.E_mail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+   
+         </fieldset>
+    
+    <div class="control">
+        <button>Выполнить вход</button>
+    </div>
+     
+}
+    
+       
+</div>
+    <div> o nas!</div>
+    </body>
+@*  *@

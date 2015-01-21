@@ -1,0 +1,29 @@
+﻿@model AtelerSalakhutdinova.Models.Скидка
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Скидка</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Количество_заказов)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Количество_заказов)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Скидка1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Скидка1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

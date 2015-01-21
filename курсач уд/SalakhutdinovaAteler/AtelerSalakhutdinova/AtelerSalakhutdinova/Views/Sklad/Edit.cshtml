@@ -1,0 +1,75 @@
+﻿@model AtelerSalakhutdinova.Models.СкладТканей
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>СкладТканей</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_ткани, "СведенияОТканях")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_ткани", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_ткани)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Наименование_ткани)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Наименование_ткани)
+            @Html.ValidationMessageFor(model => model.Наименование_ткани)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Количество_)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Количество_)
+            @Html.ValidationMessageFor(model => model.Количество_)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Состав_ткани)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Состав_ткани)
+            @Html.ValidationMessageFor(model => model.Состав_ткани)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Цвет)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Цвет)
+            @Html.ValidationMessageFor(model => model.Цвет)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Цена)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Цена)
+            @Html.ValidationMessageFor(model => model.Цена)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,99 @@
+﻿@model AtelerSalakhutdinova.Models.Заказ
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Заказ</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_заказа, "Состояние")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_заказа", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_заказа)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_заказчика, "Клиент")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_заказчика", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_заказчика)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_доставки, "Доставка")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_доставки", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_доставки)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_сотрудника)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_сотрудника)
+            @Html.ValidationMessageFor(model => model.ID_сотрудника)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_выкройки, "Выкройки")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_выкройки", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_выкройки)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Цена_заказа)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Цена_заказа)
+            @Html.ValidationMessageFor(model => model.Цена_заказа)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Предоплата)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Предоплата)
+            @Html.ValidationMessageFor(model => model.Предоплата)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Дата_заказа)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Дата_заказа)
+            @Html.ValidationMessageFor(model => model.Дата_заказа)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Срочность)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Срочность)
+            @Html.ValidationMessageFor(model => model.Срочность)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

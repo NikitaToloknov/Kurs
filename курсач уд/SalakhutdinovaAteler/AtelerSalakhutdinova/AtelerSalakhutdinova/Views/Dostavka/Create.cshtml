@@ -1,0 +1,67 @@
+﻿@model AtelerSalakhutdinova.Models.Доставка
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Доставка</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_доставки)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_доставки)
+            @Html.ValidationMessageFor(model => model.ID_доставки)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_сотрудника, "Сотрудник")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_сотрудника", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_сотрудника)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Стоимость_доставки)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Стоимость_доставки)
+            @Html.ValidationMessageFor(model => model.Стоимость_доставки)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Дата_доставки)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Дата_доставки)
+            @Html.ValidationMessageFor(model => model.Дата_доставки)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Время_доставки)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Время_доставки)
+            @Html.ValidationMessageFor(model => model.Время_доставки)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

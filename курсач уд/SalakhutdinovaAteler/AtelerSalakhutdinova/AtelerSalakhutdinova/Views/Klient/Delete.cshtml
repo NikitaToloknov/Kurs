@@ -1,0 +1,74 @@
+﻿@model AtelerSalakhutdinova.Models.Клиент
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Клиент</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_заказчика)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_заказчика)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Фамилия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Фамилия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Имя)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Имя)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Отчество)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Отчество)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Контактный_телефон)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Контактный_телефон)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.E_mail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.E_mail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Количество_заказов)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Количество_заказов)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

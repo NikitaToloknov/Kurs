@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AtelierModelContainer" CdmEntityContainer="AtelierEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AtelierModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Аксессуары">
+      <EntityTypeMapping TypeName="AtelierModel.Аксессуары">
+        <MappingFragment StoreEntitySet="Аксессуары">
+          <ScalarProperty Name="ID_аксессуара" ColumnName="ID аксессуара" />
+          <ScalarProperty Name="Наименование_аксессуара" ColumnName="Наименование аксессуара" />
+          <ScalarProperty Name="Тип" ColumnName="Тип" />
+          <ScalarProperty Name="Фото" ColumnName="Фото" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Бухгалтерия">
+      <EntityTypeMapping TypeName="AtelierModel.Бухгалтерия">
+        <MappingFragment StoreEntitySet="Бухгалтерия">
+          <ScalarProperty Name="ID_зарплаты" ColumnName="ID зарплаты" />
+          <ScalarProperty Name="ID_сотрудника" ColumnName="ID сотрудника" />
+          <ScalarProperty Name="Зарплата" ColumnName="Зарплата" />
+          <ScalarProperty Name="Премия" ColumnName="Премия" />
+          <ScalarProperty Name="Дата_зарплаты" ColumnName="Дата зарплаты" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Выкройки">
+      <EntityTypeMapping TypeName="AtelierModel.Выкройки">
+        <MappingFragment StoreEntitySet="Выкройки">
+          <ScalarProperty Name="ID_выкройки" ColumnName="ID выкройки" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Схема" ColumnName="Схема" />
+          <ScalarProperty Name="Фото_модели" ColumnName="Фото модели" />
+          <ScalarProperty Name="ID_мерки" ColumnName="ID мерки" />
+          <ScalarProperty Name="ID_ткани" ColumnName="ID ткани" />
+          <ScalarProperty Name="ID_аксессуара" ColumnName="ID аксессуара" />
+          <ScalarProperty Name="Количество_ткани" ColumnName="Количество ткани" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Доставка">
+      <EntityTypeMapping TypeName="AtelierModel.Доставка">
+        <MappingFragment StoreEntitySet="Доставка">
+          <ScalarProperty Name="ID_доставки" ColumnName="ID доставки" />
+          <ScalarProperty Name="ID_сотрудника" ColumnName="ID сотрудника" />
+          <ScalarProperty Name="Стоимость_доставки" ColumnName="Стоимость доставки" />
+          <ScalarProperty Name="Дата_доставки" ColumnName="Дата доставки" />
+          <ScalarProperty Name="Время_доставки" ColumnName="Время доставки" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заказ">
+      <EntityTypeMapping TypeName="AtelierModel.Заказ">
+        <MappingFragment StoreEntitySet="Заказ">
+          <ScalarProperty Name="ID_заказа" ColumnName="ID заказа" />
+          <ScalarProperty Name="ID_заказчика" ColumnName="ID заказчика" />
+          <ScalarProperty Name="ID_доставки" ColumnName="ID доставки" />
+          <ScalarProperty Name="ID_сотрудника" ColumnName="ID сотрудника" />
+          <ScalarProperty Name="ID_выкройки" ColumnName="ID выкройки" />
+          <ScalarProperty Name="Цена_заказа" ColumnName="Цена заказа" />
+          <ScalarProperty Name="Предоплата" ColumnName="Предоплата" />
+          <ScalarProperty Name="Дата_заказа" ColumnName="Дата заказа" />
+          <ScalarProperty Name="Срочность" ColumnName="Срочность" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ЗаписьНаМерку">
+      <EntityTypeMapping TypeName="AtelierModel.ЗаписьНаМерку">
+        <MappingFragment StoreEntitySet="ЗаписьНаМерку">
+          <ScalarProperty Name="ID_мерки" ColumnName="ID мерки" />
+          <ScalarProperty Name="ID_заказчика" ColumnName="ID заказчика" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+          <ScalarProperty Name="Время" ColumnName="Время" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Клиент">
+      <EntityTypeMapping TypeName="AtelierModel.Клиент">
+        <MappingFragment StoreEntitySet="Клиент">
+          <ScalarProperty Name="ID_заказчика" ColumnName="ID заказчика" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Контактный_телефон" ColumnName="Контактный телефон" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Количество_заказов" ColumnName="Количество заказов" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Мерки">
+      <EntityTypeMapping TypeName="AtelierModel.Мерки">
+        <MappingFragment StoreEntitySet="Мерки">
+          <ScalarProperty Name="ID_мерки" ColumnName="ID мерки" />
+          <ScalarProperty Name="Обхват_груди" ColumnName="Обхват груди" />
+          <ScalarProperty Name="Обхват_талии" ColumnName="Обхват талии" />
+          <ScalarProperty Name="Обхват_бедер" ColumnName="Обхват бедер" />
+          <ScalarProperty Name="Рост" ColumnName="Рост" />
+          <ScalarProperty Name="Примечания" ColumnName="Примечания" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Оборудование">
+      <EntityTypeMapping TypeName="AtelierModel.Оборудование">
+        <MappingFragment StoreEntitySet="Оборудование">
+          <ScalarProperty Name="ID_оборудования" ColumnName="ID оборудования" />
+          <ScalarProperty Name="Наименование_оборудования" ColumnName="Наименование оборудования" />
+          <ScalarProperty Name="Дата_приобретения" ColumnName="Дата приобретения" />
+          <ScalarProperty Name="Состояние" ColumnName="Состояние" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="СведенияОТканях">
+      <EntityTypeMapping TypeName="AtelierModel.СведенияОТканях">
+        <MappingFragment StoreEntitySet="СведенияОТканях">
+          <ScalarProperty Name="ID_ткани" ColumnName="ID ткани" />
+          <ScalarProperty Name="Страна_производитель" ColumnName="Страна производитель" />
+          <ScalarProperty Name="Дата_изготовления" ColumnName="Дата изготовления" />
+          <ScalarProperty Name="Дата_привоза" ColumnName="Дата привоза" />
+          <ScalarProperty Name="Покупная_цена" ColumnName="Покупная цена" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Скидка">
+      <EntityTypeMapping TypeName="AtelierModel.Скидка">
+        <MappingFragment StoreEntitySet="Скидка">
+          <ScalarProperty Name="Количество_заказов" ColumnName="Количество заказов" />
+          <ScalarProperty Name="Скидка1" ColumnName="Скидка" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="СкладТканей">
+      <EntityTypeMapping TypeName="AtelierModel.СкладТканей">
+        <MappingFragment StoreEntitySet="СкладТканей">
+          <ScalarProperty Name="ID_ткани" ColumnName="ID ткани" />
+          <ScalarProperty Name="Наименование_ткани" ColumnName="Наименование ткани" />
+          <ScalarProperty Name="Количество_" ColumnName="Количество " />
+          <ScalarProperty Name="Состав_ткани" ColumnName="Состав ткани" />
+          <ScalarProperty Name="Цвет" ColumnName="Цвет" />
+          <ScalarProperty Name="Цена" ColumnName="Цена" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Состояние">
+      <EntityTypeMapping TypeName="AtelierModel.Состояние">
+        <MappingFragment StoreEntitySet="Состояние">
+          <ScalarProperty Name="ID_заказа" ColumnName="ID заказа" />
+          <ScalarProperty Name="Примечания" ColumnName="Примечания" />
+          <ScalarProperty Name="Состояние1" ColumnName="Состояние" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сотрудник">
+      <EntityTypeMapping TypeName="AtelierModel.Сотрудник">
+        <MappingFragment StoreEntitySet="Сотрудник">
+          <ScalarProperty Name="ID_сотрудника" ColumnName="ID сотрудника" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="Дата_приема_на_работу" ColumnName="Дата приема на работу" />
+          <ScalarProperty Name="Общий_стаж" ColumnName="Общий стаж" />
+          <ScalarProperty Name="Стаж" ColumnName="Стаж" />
+          <ScalarProperty Name="Доступ_ко_всем_данным" ColumnName="Доступ ко всем данным" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Оклад" ColumnName="Оклад" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="СотрудникОборудование">
+      <EntityTypeMapping TypeName="AtelierModel.СотрудникОборудование">
+        <MappingFragment StoreEntitySet="СотрудникОборудование">
+          <ScalarProperty Name="ID_Связи" ColumnName="ID Связи" />
+          <ScalarProperty Name="ID_сотрудника" ColumnName="ID сотрудника" />
+          <ScalarProperty Name="ID_оборудования" ColumnName="ID оборудования" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ProcedureSalary" FunctionName="Хранилище AtelierModel.ProcedureSalary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AtelierModel.ProcedureSalary_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+          <ScalarProperty Name="Column9" ColumnName="Column9" />
+          <ScalarProperty Name="Column10" ColumnName="Column10" />
+          <ScalarProperty Name="Column11" ColumnName="Column11" />
+          <ScalarProperty Name="Column12" ColumnName="Column12" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProcedurExperience" FunctionName="Хранилище AtelierModel.ProcedurExperience">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AtelierModel.ProcedurExperience_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+          <ScalarProperty Name="Column9" ColumnName="Column9" />
+          <ScalarProperty Name="Column10" ColumnName="Column10" />
+          <ScalarProperty Name="Column11" ColumnName="Column11" />
+          <ScalarProperty Name="Column12" ColumnName="Column12" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище AtelierModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище AtelierModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище AtelierModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище AtelierModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AtelierModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище AtelierModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AtelierModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище AtelierModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище AtelierModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

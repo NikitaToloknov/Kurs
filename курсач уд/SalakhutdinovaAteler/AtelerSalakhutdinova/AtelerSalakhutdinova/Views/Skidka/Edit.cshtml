@@ -1,0 +1,43 @@
+﻿@model AtelerSalakhutdinova.Models.Скидка
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Скидка</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Количество_заказов)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Количество_заказов)
+            @Html.ValidationMessageFor(model => model.Количество_заказов)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Скидка1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Скидка1)
+            @Html.ValidationMessageFor(model => model.Скидка1)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

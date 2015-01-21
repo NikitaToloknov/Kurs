@@ -1,0 +1,32 @@
+﻿@model AtelerSalakhutdinova.Models.Скидка
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Скидка</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Количество_заказов)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Количество_заказов)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Скидка1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Скидка1)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

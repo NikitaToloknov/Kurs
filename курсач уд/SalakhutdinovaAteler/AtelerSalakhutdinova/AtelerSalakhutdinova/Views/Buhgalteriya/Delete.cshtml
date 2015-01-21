@@ -1,0 +1,53 @@
+﻿@model AtelerSalakhutdinova.Models.Бухгалтерия
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Бухгалтерия</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_зарплаты)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_зарплаты)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Сотрудник.Фамилия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Сотрудник.Фамилия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Зарплата)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Зарплата)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Премия)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Премия)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Дата_зарплаты)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Дата_зарплаты)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

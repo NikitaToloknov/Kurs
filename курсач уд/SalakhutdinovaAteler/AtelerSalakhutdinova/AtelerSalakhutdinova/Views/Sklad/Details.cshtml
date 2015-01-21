@@ -1,0 +1,57 @@
+﻿@model AtelerSalakhutdinova.Models.СкладТканей
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>СкладТканей</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.СведенияОТканях.Страна_производитель)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.СведенияОТканях.Страна_производитель)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Наименование_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Наименование_ткани)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Количество_)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Количество_)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Состав_ткани)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Состав_ткани)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Цвет)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Цвет)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Цена)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Цена)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

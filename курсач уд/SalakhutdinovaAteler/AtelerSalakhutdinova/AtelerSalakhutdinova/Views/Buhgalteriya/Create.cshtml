@@ -1,0 +1,67 @@
+﻿@model AtelerSalakhutdinova.Models.Бухгалтерия
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Бухгалтерия</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_зарплаты)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_зарплаты)
+            @Html.ValidationMessageFor(model => model.ID_зарплаты)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_сотрудника, "Сотрудник")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_сотрудника", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_сотрудника)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Зарплата)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Зарплата)
+            @Html.ValidationMessageFor(model => model.Зарплата)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Премия)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Премия)
+            @Html.ValidationMessageFor(model => model.Премия)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Дата_зарплаты)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Дата_зарплаты)
+            @Html.ValidationMessageFor(model => model.Дата_зарплаты)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

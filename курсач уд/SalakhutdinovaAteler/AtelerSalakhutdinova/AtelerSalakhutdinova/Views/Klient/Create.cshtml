@@ -1,0 +1,91 @@
+﻿@model AtelerSalakhutdinova.Models.Клиент
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Клиент</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_заказчика)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_заказчика)
+            @Html.ValidationMessageFor(model => model.ID_заказчика)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Фамилия)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Фамилия)
+            @Html.ValidationMessageFor(model => model.Фамилия)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Имя)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Имя)
+            @Html.ValidationMessageFor(model => model.Имя)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Отчество)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Отчество)
+            @Html.ValidationMessageFor(model => model.Отчество)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Контактный_телефон)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Контактный_телефон)
+            @Html.ValidationMessageFor(model => model.Контактный_телефон)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.E_mail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.E_mail)
+            @Html.ValidationMessageFor(model => model.E_mail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Количество_заказов)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Количество_заказов)
+            @Html.ValidationMessageFor(model => model.Количество_заказов)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
