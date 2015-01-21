@@ -186,42 +186,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="ProcedureSalary" FunctionName="Хранилище AtelierModel.ProcedureSalary">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="AtelierModel.ProcedureSalary_Result">
-          <ScalarProperty Name="Column1" ColumnName="Column1" />
-          <ScalarProperty Name="Column2" ColumnName="Column2" />
-          <ScalarProperty Name="Column3" ColumnName="Column3" />
-          <ScalarProperty Name="Column4" ColumnName="Column4" />
-          <ScalarProperty Name="Column5" ColumnName="Column5" />
-          <ScalarProperty Name="Column6" ColumnName="Column6" />
-          <ScalarProperty Name="Column7" ColumnName="Column7" />
-          <ScalarProperty Name="Column8" ColumnName="Column8" />
-          <ScalarProperty Name="Column9" ColumnName="Column9" />
-          <ScalarProperty Name="Column10" ColumnName="Column10" />
-          <ScalarProperty Name="Column11" ColumnName="Column11" />
-          <ScalarProperty Name="Column12" ColumnName="Column12" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="ProcedurExperience" FunctionName="Хранилище AtelierModel.ProcedurExperience">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="AtelierModel.ProcedurExperience_Result">
-          <ScalarProperty Name="Column1" ColumnName="Column1" />
-          <ScalarProperty Name="Column2" ColumnName="Column2" />
-          <ScalarProperty Name="Column3" ColumnName="Column3" />
-          <ScalarProperty Name="Column4" ColumnName="Column4" />
-          <ScalarProperty Name="Column5" ColumnName="Column5" />
-          <ScalarProperty Name="Column6" ColumnName="Column6" />
-          <ScalarProperty Name="Column7" ColumnName="Column7" />
-          <ScalarProperty Name="Column8" ColumnName="Column8" />
-          <ScalarProperty Name="Column9" ColumnName="Column9" />
-          <ScalarProperty Name="Column10" ColumnName="Column10" />
-          <ScalarProperty Name="Column11" ColumnName="Column11" />
-          <ScalarProperty Name="Column12" ColumnName="Column12" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProcedureSalary" FunctionName="Хранилище AtelierModel.ProcedureSalary" />
+    <FunctionImportMapping FunctionImportName="ProcedurExperience" FunctionName="Хранилище AtelierModel.ProcedurExperience" />
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище AtelierModel.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище AtelierModel.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище AtelierModel.sp_dropdiagram" />
@@ -246,5 +212,6 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище AtelierModel.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище AtelierModel.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="pExperience" FunctionName="Хранилище AtelierModel.ProcedurExperience" />
   </EntityContainerMapping>
 </Mapping>

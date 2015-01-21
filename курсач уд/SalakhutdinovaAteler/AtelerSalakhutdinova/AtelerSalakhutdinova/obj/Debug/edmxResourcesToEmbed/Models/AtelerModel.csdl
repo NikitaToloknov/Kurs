@@ -69,8 +69,8 @@
       <End Role="Сотрудник" EntitySet="Сотрудник" />
       <End Role="СотрудникОборудование" EntitySet="СотрудникОборудование" />
     </AssociationSet>
-    <FunctionImport Name="ProcedureSalary" ReturnType="Collection(AtelierModel.ProcedureSalary_Result)" />
-    <FunctionImport Name="ProcedurExperience" ReturnType="Collection(AtelierModel.ProcedurExperience_Result)" />
+    <FunctionImport Name="ProcedureSalary" />
+    <FunctionImport Name="ProcedurExperience" />
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -101,6 +101,7 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="pExperience" />
   </EntityContainer>
   <EntityType Name="sysdiagrams">
     <Key>

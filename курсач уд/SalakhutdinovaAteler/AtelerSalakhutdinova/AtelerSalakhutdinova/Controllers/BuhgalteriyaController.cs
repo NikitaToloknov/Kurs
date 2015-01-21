@@ -18,8 +18,8 @@ namespace AtelerSalakhutdinova.Controllers
 
         public ActionResult Index()
         {
-            //db.ProcedurExperience();
-            //db.ProcedureSalary();
+            db.ProcedurExperience();
+            db.ProcedureSalary();
             db.SaveChanges();
             var бухгалтерия = db.Бухгалтерия.Include(б => б.Сотрудник);
             return View(бухгалтерия.ToList());
@@ -43,7 +43,6 @@ namespace AtelerSalakhutdinova.Controllers
 
         public ActionResult Create()
         {
-            db.ProcedurExperience();
             ViewBag.ID_сотрудника = new SelectList(db.Сотрудник, "ID_сотрудника", "Фамилия");
             return View();
         }

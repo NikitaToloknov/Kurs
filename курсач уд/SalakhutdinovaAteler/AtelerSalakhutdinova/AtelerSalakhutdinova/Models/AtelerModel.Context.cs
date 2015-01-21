@@ -45,14 +45,14 @@ namespace AtelerSalakhutdinova.Models
         public DbSet<Сотрудник> Сотрудник { get; set; }
         public DbSet<СотрудникОборудование> СотрудникОборудование { get; set; }
     
-        public virtual ObjectResult<ProcedureSalary_Result> ProcedureSalary()
+        public virtual int ProcedureSalary()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProcedureSalary_Result>("ProcedureSalary");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ProcedureSalary");
         }
     
-        public virtual ObjectResult<ProcedurExperience_Result> ProcedurExperience()
+        public virtual int ProcedurExperience()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProcedurExperience_Result>("ProcedurExperience");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ProcedurExperience");
         }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
@@ -156,6 +156,11 @@ namespace AtelerSalakhutdinova.Models
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual int pExperience()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pExperience");
         }
     }
 }
